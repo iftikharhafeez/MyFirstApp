@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:padding="10dp">
 
 
     <Button
@@ -16,4 +17,24 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="63dp"
         android:text="show Toest" />
+
+    <EditText
+        android:id="@+id/UserMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="169dp"
+        android:ems="10"
+        android:hint="Enter Your Name" />
+
+    <Button
+        android:id="@+id/btnSendMtoNActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="290dp"
+        android:text="Send Data to nxt Activity" />
+
 </RelativeLayout>

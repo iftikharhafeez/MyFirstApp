@@ -1,5 +1,6 @@
 package com.iftikharhafeez.testapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -15,6 +16,17 @@ class MainActivity : AppCompatActivity() {
             Log.i("MainActivity", "Button was Clicked")
 
             Toast.makeText(this,  "Button was clicked!!", Toast.LENGTH_SHORT).show()
+        }
+
+        btnSendMtoNActivity.setOnClickListener {
+            Toast.makeText(this,  "2nd Button was clicked!!", Toast.LENGTH_SHORT).show()
+
+            val message: String = UserMessage.text.toString()
+            Toast.makeText(this,  message, Toast.LENGTH_SHORT).show()
+
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
+
         }
     }
 }
