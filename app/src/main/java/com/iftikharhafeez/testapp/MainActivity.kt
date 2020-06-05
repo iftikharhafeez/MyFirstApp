@@ -14,19 +14,27 @@ class MainActivity : AppCompatActivity() {
 
         btnSHowToast.setOnClickListener {
             Log.i("MainActivity", "Button was Clicked")
-
             Toast.makeText(this,  "Button was clicked!!", Toast.LENGTH_SHORT).show()
         }
 
         btnSendMtoNActivity.setOnClickListener {
-            Toast.makeText(this,  "2nd Button was clicked!!", Toast.LENGTH_SHORT).show()
+            val message: String = UserMessage.text.toString()
+            val intent = Intent(this, SecondActivity::class.java)
+
+            intent.putExtra("User_message", message)
+            startActivity(intent) // explicit intent
+
+        }
+
+        ShareBtn.setOnClickListener {
 
             val message: String = UserMessage.text.toString()
-            Toast.makeText(this,  message, Toast.LENGTH_SHORT).show()
+            val intent = Intent()
+            intent.action = Intent.ACTION_SEND
+            intent.putExtra(Intent.EXTRA_TEXT, message)
+            intent.type = "text/plain"
 
-            val intent = Intent(this, SecondActivity::class.java)
-            startActivity(intent)
-
+            startActivity(Intent.createChooser(intent, "share to : "))
         }
     }
 }

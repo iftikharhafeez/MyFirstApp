@@ -37,4 +37,13 @@
         android:layout_marginTop="290dp"
         android:text="Send Data to nxt Activity" />
 
+    <Button
+        android:id="@+id/ShareBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="350dp"
+        android:text="Share" />
+
 </RelativeLayout>
