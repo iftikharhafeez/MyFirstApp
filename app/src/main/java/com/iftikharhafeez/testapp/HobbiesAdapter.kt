@@ -1,10 +1,13 @@
 package com.iftikharhafeez.testapp
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.list_view.view.*
 
 class HobbiesAdapter(val context: Context, val hobbies: List<Hobby>) : RecyclerView.Adapter<HobbiesAdapter.MyViewHolder>() {
@@ -25,8 +28,30 @@ class HobbiesAdapter(val context: Context, val hobbies: List<Hobby>) : RecyclerV
 
 
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+
+        var currentHobby: Hobby? = null
+        var currentposition: Int = 0
+
+        init {
+            itemView.setOnClickListener {
+                Toast.makeText(context, currentHobby!!.title + "Clicked! ", Toast.LENGTH_SHORT).show()
+            }
+
+            itemView.imgShare.setOnClickListener {
+                val message: String = "my hobby is : " +currentHobby!!.title
+                val intent = Intent()
+                intent.action = Intent.ACTION_SEND
+                intent.putExtra(Intent.EXTRA_TEXT, message)
+                intent.type = "text/plain"
+
+                context.startActivity(Intent.createChooser(intent, "share to : "))
+            }
+        }
+
         fun setData(hobby: Hobby?, pos: Int){
             itemView.txvTitle.text = hobby!!.title
+            this.currentHobby = hobby
+            this.currentposition = pos
         }
     }
 
