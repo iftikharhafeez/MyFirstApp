@@ -1,27 +1,34 @@
-package com.iftikharhafeez.testapp
+package com.iftikharhafeez.testapp.actities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.iftikharhafeez.testapp.Constants
+import com.iftikharhafeez.testapp.R
+import com.iftikharhafeez.testapp.showToast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+    companion object {
+        val TAG : String= MainActivity::class.java.simpleName
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         btnSHowToast.setOnClickListener {
-            Log.i("MainActivity", "Button was Clicked")
-            Toast.makeText(this,  "Button was clicked!!", Toast.LENGTH_SHORT).show()
+            Log.i(TAG, "Button was Clicked")
+            showToast("Button was clicked!!")
         }
 
         btnSendMtoNActivity.setOnClickListener {
             val message: String = UserMessage.text.toString()
             val intent = Intent(this, SecondActivity::class.java)
 
-            intent.putExtra("User_message", message)
+            intent.putExtra(Constants.USER_MSG_KEY, message)
             startActivity(intent) // explicit intent
 
         }

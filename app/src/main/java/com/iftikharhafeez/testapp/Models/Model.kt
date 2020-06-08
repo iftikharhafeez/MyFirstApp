@@ -1,4 +1,4 @@
-package com.iftikharhafeez.testapp
+package com.iftikharhafeez.testapp.Models
 
 data class Hobby(var title: String)
 

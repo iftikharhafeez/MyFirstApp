@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <string name = "app_name" >ٹیسٹ ایپ</string>
+    <string name = "Enter_Your_Name" >اپنا نام درج کریں</string>
+    <string name = "Send_to_nxt_Activity" >اگلی سرگرمی پر ڈیٹا بھیجیں</string>
+    <string name = "Share" >Share</string>
+    <string name = "Hobbies" >شوق</string>
+    <string name = "btn_show_toast"> کلک کریں</string>>
+</resources>

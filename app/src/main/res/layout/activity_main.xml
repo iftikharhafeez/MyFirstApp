@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:padding="10dp">
+    android:padding="10dp"
+    tools:context=".actities.MainActivity">
 
 
     <Button
@@ -16,7 +14,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="63dp"
-        android:text="show Toest" />
+        android:text="@string/btn_show_toast" />
 
     <EditText
         android:id="@+id/UserMessage"
@@ -26,7 +24,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="169dp"
         android:ems="10"
-        android:hint="Enter Your Name" />
+        android:hint="@string/Enter_Your_Name"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/btnSendMtoNActivity"
@@ -35,7 +34,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="290dp"
-        android:text="Send Data to nxt Activity" />
+        android:text="@string/Send_to_nxt_Activity" />
 
     <Button
         android:id="@+id/ShareBtn"
@@ -44,7 +43,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="350dp"
-        android:text="Share" />
+        android:text="@string/Share" />
 
     <Button
         android:id="@+id/btnRecuclerviewDemo"
@@ -53,6 +52,6 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="415dp"
-        android:text="RecyclerView" />
+        android:text="@string/Hobbies" />
 
 </RelativeLayout>

@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">TestApp</string>
+    <string name = "app_name" >TestApp</string>
+    <string name = "Enter_Your_Name" >Enter Your Name</string>
+    <string name = "Send_to_nxt_Activity" >Send Data to nxt Activity</string>
+    <string name = "Share" >Share</string>
+    <string name = "Hobbies" >Hobbies</string>
+    <string name = "btn_show_toast"> Show Toast</string>>
 </resources>
